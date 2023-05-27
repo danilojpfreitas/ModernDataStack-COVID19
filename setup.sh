@@ -24,6 +24,12 @@ install() {
     docker-compose up
     cd ..
 
+    echo "Snowflake"
+    mkdir snowflake
+    cd snowflake
+    wget https://raw.githubusercontent.com/danilojpfreitas/DataPipeline-airbyte-dbt-airflow-snowflake-metabase/main/snowflake/create-entites-snowflake.sql
+    cd ..
+
     echo "Access Airbyte at http://localhost:8000 and set up the connections."
   
     echo "Access Airflow at http://localhost:8080 to kick off your Airbyte sync DAG."  
